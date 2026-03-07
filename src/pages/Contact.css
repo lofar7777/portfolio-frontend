@@ -148,15 +148,38 @@
 @media (max-width: 900px) {
     .contact-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 500px) {
-    .form-row {
-        grid-template-columns: 1fr;
+        gap: 32px;
     }
 
     .contact-form-card {
-        padding: 24px;
+        padding: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contact-form-card {
+        padding: 20px 16px;
+    }
+
+    .contact-submit {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+
+    .contact-cards {
+        gap: 10px;
+    }
+
+    .contact-card {
+        padding: 14px 16px;
+    }
+
+    .contact-card__icon {
+        font-size: 1.2rem;
     }
 }

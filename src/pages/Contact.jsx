@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { api } from '../api'
 import './Contact.css'
 
 const INITIAL = { name: '', email: '', subject: '', message: '' }
@@ -14,11 +15,7 @@ export default function Contact() {
         e.preventDefault()
         setStatus('loading')
         try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form),
-            })
+            const res = await api.post('/api/contact', form)
             if (!res.ok) {
                 const data = await res.json()
                 throw new Error(data.message || 'Something went wrong')

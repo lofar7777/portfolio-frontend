@@ -170,8 +170,40 @@
     margin-bottom: 16px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .skills-categories {
         grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .skills-filter {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-filter {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+    }
+
+    .skills-filter::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+    }
+
+    .skill-item {
+        padding: 12px 16px;
     }
 }

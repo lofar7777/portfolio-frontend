@@ -150,3 +150,37 @@
     font-size: 0.85rem;
     color: var(--accent-violet);
 }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card__cover {
+        height: 130px;
+    }
+
+    .project-card__body {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card__links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project-link {
+        width: 100%;
+        justify-content: center;
+    }
+}

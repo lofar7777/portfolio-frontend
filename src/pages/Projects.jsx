@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { api } from '../api'
 import './Projects.css'
 
 export default function Projects() {
@@ -7,7 +8,7 @@ export default function Projects() {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        fetch('/api/projects')
+        api.get('/api/projects')
             .then(res => { if (!res.ok) throw new Error('Failed to fetch'); return res.json() })
             .then(data => { setProjects(data); setLoading(false) })
             .catch(err => { setError(err.message); setLoading(false) })

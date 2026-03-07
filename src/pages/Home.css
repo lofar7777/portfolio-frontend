@@ -292,7 +292,49 @@
     z-index: 1;
 }
 
-@media (max-width: 900px) {
+/* ══════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════ */
+
+/* ── Tablet & small desktop (≤ 960px) ── */
+@media (max-width: 960px) {
+    .hero__inner {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .hero__content {
+        max-width: 100%;
+    }
+
+    .hero__badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+    .hero__photo-wrap {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero__photo-container {
+        width: 220px;
+        height: 220px;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -303,12 +345,67 @@
     }
 }
 
-@media (max-width: 500px) {
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+    .hero__inner {
+        padding-top: 90px;
+        padding-bottom: 48px;
+        gap: 32px;
+    }
+
+    .hero__title {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .hero__photo-wrap {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero__photo-container {
+        width: 165px;
+        height: 165px;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 20px 12px;
+    }
+
+    .stat-card__count {
+        font-size: 1.7rem;
+    }
+
+    .about-actions {
+        flex-direction: column;
+    }
+
+    .about-actions .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .cta-card {
-        padding: 48px 24px;
+        padding: 48px 20px;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
     }
 }
